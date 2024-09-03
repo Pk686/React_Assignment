@@ -33,7 +33,7 @@ o	WebSocket Connection: Check the browser console (press F12 or Ctrl+Shift+I > C
 o	Course List: Verify that the course list is displayed and that the likes data is updated in real-time.
 
                                                                 Summary
-1.	Start WebSocket Server:
+1. Start WebSocket Server:
 * cd path/to/server
 * npm install ws
 * node websocketServer.js
