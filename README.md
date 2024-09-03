@@ -1,8 +1,8 @@
                                          Instructions to Run the Application
-1. Prerequisites
+1. Prerequisites --
 Make sure you have the following installed on your machine:
 •	Node.js (which includes npm) - Download from nodejs.org
-2. Setting Up and Running the WebSocket Server
+2. Setting Up and Running the WebSocket Server.
 1.	Navigate to the WebSocket Server Directory:
 Open a terminal or command prompt and navigate to the server directory.
 cd path/to/server
@@ -34,12 +34,12 @@ o	Course List: Verify that the course list is displayed and that the likes data 
 
                                                                 Summary
 1.	Start WebSocket Server:
-cd path/to/server
-npm install ws
-node websocketServer.js
+* cd path/to/server
+* npm install ws
+* node websocketServer.js
 2.	Start React Application:
-cd path/to/Assignment
-npm install
-npm start
+* cd path/to/Assignment
+* npm install
+* npm start
 3.	View in Browser:
-Open http://127.0.0.1:5173 in your web browser to view the React application.
+* Open http://127.0.0.1:5173 in your web browser to view the React application.
