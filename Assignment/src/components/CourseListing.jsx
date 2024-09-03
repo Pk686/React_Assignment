@@ -1,6 +1,7 @@
 // CourseList.js
 import React, { useContext, useState, useEffect } from 'react';
 import { CourseContext } from './CourseProvider';
+import { NavLink } from 'react-router-dom';
 
 const CourseList = () => {
     const { courses } = useContext(CourseContext);
@@ -59,12 +60,13 @@ const CourseList = () => {
                         <p>Instructor: {course.instructor}</p>
                         <p>Likes: {likes[course.id] || 0}</p> {/* Display likes */}
                         <div className='button-group'>
-                            <button onClick={() => window.location.href = `/courses/${course.id}`}>
+                            <NavLink onClick={() => window.location.href = `/courses/${course.id}`} 
+                            className='button-status'>
                                 View Details
-                            </button>
-                            <button onClick={() => window.location.href = `/dashboard`}>
+                            </NavLink>
+                            <NavLink to="/dashboard"  className='button-status' >
                                 Dashboard
-                            </button>
+                            </NavLink>
                         </div>
                     </div>
                 ))}

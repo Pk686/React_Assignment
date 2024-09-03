@@ -1,6 +1,7 @@
 // StudentDashboard.js
 import React, { useContext } from 'react';
 import { CourseContext } from './CourseProvider';
+import { NavLink } from 'react-router-dom';
 
 const StudentDashboard = () => {
   const { courses, markAsCompleted } = useContext(CourseContext);
@@ -33,12 +34,12 @@ const StudentDashboard = () => {
             </div>
 
             <div className="button-group">
-              <button onClick={() => markAsCompleted(course.id)} className="complete-button">
+              <NavLink onClick={() => markAsCompleted(course.id)} className="go-back-button">
                 Mark as Completed
-              </button>
-              <button onClick={() => window.location.href = `/`} className="go-back-button">
+              </NavLink>
+              <NavLink onClick={() => window.location.href = `/`} className="go-back-button">
                 Go Back
-              </button>
+              </NavLink>
             </div>
           </div>
         ))}

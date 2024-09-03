@@ -1,22 +1,26 @@
 /* App.css */
 
+/* Dark Theme Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f6f9;
+  background-color: #1e1e1e; /* Dark background */
   margin: 0;
   padding: 0;
+  color: white; /* Set all text to white */
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: white; /* White text for headings */
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
+  background-color: #1e1e1e; /* Dark background for containers */
+  border-radius: 8px;
 }
 
 .course-list, .student-dashboard, .course-details {
@@ -30,24 +34,30 @@ h2 {
   max-width: 600px;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid white; /* White border for search bar */
   border-radius: 4px;
+  background-color: #2a2a2a; /* Dark background for input */
+  color: white; /* White text */
   font-size: 16px;
 }
 
 .course-container, .enrolled-courses {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  justify-content: center;/* Centers the grid */
   width: 100%;
+  max-width: 1500px; /* Limits the maximum width */
+  margin: 0 auto; /* Centers the grid on the page */
 }
 
 .course-card {
   position: relative;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #2a2a2a; /* Dark background for cards */
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid white; /* White border for the cards */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1); /* Light shadow with white tint */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   padding: 20px;
@@ -56,30 +66,31 @@ h2 {
 
 .course-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2); /* Enhance shadow on hover */
 }
 
 .course-card h3 {
   margin-top: 10px;
-  color: #333;
+  color: white; /* White text for headings */
 }
 
 .course-card p {
   margin: 5px 0;
-  color: #666;
+  color: #ccc; /* Light gray text for paragraphs */
 }
 
-.course-card button {
+.course-card .button-status {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
-  border: none;
+  border: 1px solid white; /* White border for buttons */
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-.course-card button:hover {
+.course-card .button-status:hover {
   background-color: #0056b3;
 }
 
@@ -88,20 +99,21 @@ h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  border: 1px; /* White border around images */
 }
 
 .progress-bar {
   position: relative;
   height: 8px;
   width: 100%;
-  background-color: #e0e0e0;
+  background-color: #444; /* Darker background for the progress bar */
   border-radius: 4px;
   margin: 10px 0;
 }
 
 .progress {
   height: 100%;
-  background-color: #28a745;
+  background-color: #28a745; /* Green progress bar */
   border-radius: 4px;
 }
 
@@ -111,26 +123,61 @@ h2 {
 }
 
 .syllabus-list li {
-  background-color: #f9f9f9;
+  background-color: #333; /* Dark background for list items */
   margin-bottom: 8px;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Light shadow */
+  color: white; /* White text */
+  border: 1px solid white; /* White border for syllabus items */
 }
 
 .syllabus-list li:hover {
-  background-color: #f0f0f0;
-}
-.button-group{
-  display: flex;
-  justify-content: center;
-  gap:30px;
-  
+  background-color: #444; /* Slightly darker background on hover */
 }
 
+.button, .go-back-button {
+  padding: 6px 12px; /* Reduced padding to make the buttons smaller */
+  background-color: #007bff;
+  color: white;
+  border: 1px solid white; /* White border for buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none; /* Remove underline from NavLink */
+  display: inline-block;
+}
+
+.button:hover, .go-back-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button Group Layout */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Reduced gap between the buttons */
+  width: 100%; /* Ensures the buttons span the entire width of the container */
+}
+
+
 /* Media Queries for Responsive Design */
+
+/* For tablets and medium-sized devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .course-container, .enrolled-courses {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium-sized devices */
+    max-width: 800px;
+  }
+}
+
 @media (max-width: 768px) {
   .course-container, .enrolled-courses {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
+    max-width:350px;
+  }
+  .search-bar{
+    max-width: 330px;
   }
 }
