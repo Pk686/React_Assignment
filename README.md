@@ -33,13 +33,13 @@ o	WebSocket Connection: Check the browser console (press F12 or Ctrl+Shift+I > C
 o	Course List: Verify that the course list is displayed and that the likes data is updated in real-time.
 
                                                                 Summary
-1. Start WebSocket Server:
+Start WebSocket Server:
 * cd path/to/server
 * npm install ws
 * node websocketServer.js
-2.	Start React Application:
+Start React Application:
 * cd path/to/Assignment
 * npm install
 * npm start
-3.	View in Browser:
+View in Browser:
 * Open http://127.0.0.1:5173 in your web browser to view the React application.
