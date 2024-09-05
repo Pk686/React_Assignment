@@ -58,7 +58,7 @@ const CourseList = () => {
                         <img src={course.thumbnail || '/images/about.png'} alt={course.name}
                             className="thumbnail" />
                         <p>Instructor: {course.instructor}</p>
-                        <p>Likes: {likes[course.id] || 0}</p> {/* Display likes */}
+                        <p>Likes: {likes[course.id] || course.likes}</p> {/* Display likes */}
                         <div className='button-group'>
                             <NavLink onClick={() => window.location.href = `/courses/${course.id}`} 
                             className='button-status'>
